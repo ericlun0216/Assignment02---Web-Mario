@@ -75,7 +75,7 @@ python -m http.server 8000
 | 項目 | 內容 |
 | --- | --- |
 | Firebase 遊戲網址 | [https://software-studio-c09b0.web.app](https://software-studio-c09b0.web.app) |
-| GitHub / GitLab repository URL | 待上傳 repository 後填入 |
+| GitHub / GitLab repository URL | https://github.com/ericlun0216/Assignment02---Web-Mario.git |
 | ZIP 檔名 | `Assignment02_109000105.zip` |
 | MD5 checksum | 最終 ZIP 完成後重新產生 |
 
