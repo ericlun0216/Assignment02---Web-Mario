@@ -1,0 +1,252 @@
+:root {
+  --ink: #17284a;
+  --cream: #fff3db;
+  --gold: #ffca3a;
+  --orange: #ee6935;
+  --panel: rgba(17, 34, 68, 0.94);
+  --sky: #54bdf2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  background: radial-gradient(circle at 50% 0%, #245891 0%, #111c3d 56%, #091126 100%);
+  color: var(--cream);
+  font-family: "Trebuchet MS", "Arial Black", Arial, sans-serif;
+}
+
+.cabinet {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 18px 20px 22px;
+}
+
+.game-title {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  margin: 0 0 12px;
+}
+
+.assignment {
+  color: #8dadd5;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.14em;
+  margin: 0;
+}
+
+h1 {
+  color: var(--gold);
+  font-size: clamp(26px, 4vw, 38px);
+  letter-spacing: 0.04em;
+  margin: 0;
+  text-shadow: 3px 3px #b33e28;
+}
+
+.stage {
+  border: 5px solid #f7c64e;
+  border-radius: 12px;
+  box-shadow: 0 8px 0 #aa402b, 0 20px 32px rgba(0, 0, 0, 0.36);
+  overflow: hidden;
+  position: relative;
+}
+
+#gameCanvas {
+  background: var(--sky);
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+.hud {
+  display: flex;
+  gap: clamp(15px, 5vw, 70px);
+  justify-content: center;
+  left: 0;
+  padding: 14px 14px 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-shadow: 2px 2px 0 #17284a;
+  top: 0;
+  z-index: 2;
+}
+
+.hud div {
+  display: grid;
+  font-size: clamp(13px, 1.8vw, 19px);
+}
+
+.label {
+  color: #ffe28a;
+  font-size: 0.65em;
+  letter-spacing: 0.12em;
+}
+
+.panel {
+  align-items: center;
+  background: var(--panel);
+  border: 3px solid var(--cream);
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.32);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  left: 50%;
+  max-width: min(430px, 88%);
+  padding: 30px 34px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 3;
+}
+
+.panel.compact {
+  max-width: 300px;
+}
+
+.panel h2 {
+  color: #fff;
+  font-size: clamp(27px, 4vw, 40px);
+  margin: 0;
+  text-shadow: 3px 3px var(--orange);
+}
+
+.badge {
+  background: var(--orange);
+  border-radius: 50px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.16em;
+  margin: 0;
+  padding: 7px 17px;
+}
+
+.intro,
+.tip {
+  color: #d9e8ff;
+  line-height: 1.6;
+  margin: 0;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  min-height: 47px;
+  padding: 11px 26px;
+  transition: transform 100ms ease, filter 100ms ease;
+}
+
+button:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+.primary {
+  background: var(--gold);
+  box-shadow: inset 0 -5px #d17b29;
+  color: var(--ink);
+  width: 220px;
+}
+
+.secondary {
+  background: #42628d;
+  box-shadow: inset 0 -4px #294266;
+  color: #fff;
+  width: 220px;
+}
+
+.level-card {
+  background: #fff2c3;
+  border: 3px solid #f3b32c;
+  color: var(--ink);
+  display: grid;
+  gap: 5px;
+  padding: 16px;
+  width: 280px;
+}
+
+.level-card small {
+  color: #a64b31;
+}
+
+.keys {
+  color: #e6efff;
+  margin: 0;
+}
+
+kbd {
+  background: #fff;
+  border-bottom: 3px solid #99abc7;
+  border-radius: 5px;
+  color: var(--ink);
+  display: inline-block;
+  margin: 0 4px;
+  padding: 4px 9px;
+}
+
+.sound {
+  background: rgba(20, 34, 60, 0.78);
+  bottom: 14px;
+  color: var(--cream);
+  font-size: 12px;
+  min-height: 36px;
+  padding: 8px 13px;
+  position: absolute;
+  right: 14px;
+  z-index: 4;
+}
+
+.footer-help {
+  color: #8da9d1;
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  margin: 18px 0 0;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .cabinet {
+    padding: 10px;
+  }
+
+  .game-title {
+    display: block;
+    margin-bottom: 9px;
+  }
+
+  .panel {
+    gap: 10px;
+    padding: 18px;
+  }
+
+  .footer-help {
+    display: none;
+  }
+}

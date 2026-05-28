@@ -1,0 +1,20 @@
+{
+  "hosting": {
+    "site": "software-studio-c09b0",
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      ".git",
+      ".git/**",
+      ".firebase",
+      ".firebase/**",
+      "**/node_modules/**",
+      "firebase-debug.log",
+      "*.zip",
+      "*.md5"
+    ],
+    "cleanUrls": true,
+    "trailingSlash": false
+  }
+}

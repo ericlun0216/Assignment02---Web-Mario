@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web Mario - Cloudtop Run</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="cabinet">
+    <header class="game-title">
+      <p class="assignment">SOFTWARE STUDIO / ASSIGNMENT 02</p>
+      <h1>Cloudtop Run</h1>
+    </header>
+
+    <section class="stage" aria-label="Web Mario game">
+      <div id="hud" class="hud hidden" aria-live="polite">
+        <div><span class="label">MARIO</span><strong id="score">000000</strong></div>
+        <div><span class="label">WORLD</span><strong>1-1</strong></div>
+        <div><span class="label">COINS</span><strong id="coins">00</strong></div>
+        <div><span class="label">LIFE</span><strong id="life">03</strong></div>
+        <div><span class="label">TIME</span><strong id="timer">300</strong></div>
+      </div>
+      <canvas id="gameCanvas" width="960" height="540" aria-label="Mario platform game canvas"></canvas>
+
+      <section id="menuScreen" class="panel">
+        <p class="badge">HTML5 EDITION</p>
+        <h2>Cloudtop Run</h2>
+        <p class="intro">穿過蘑菇丘陵，踩掉栗寶，抵達旗桿。</p>
+        <button id="openLevels" class="primary">開始遊戲</button>
+        <button id="openHelp" class="secondary">操作說明</button>
+      </section>
+
+      <section id="levelScreen" class="panel hidden">
+        <p class="badge">SELECT WORLD</p>
+        <h2>選擇關卡</h2>
+        <button id="levelOne" class="level-card">
+          <span>WORLD 1-1</span>
+          <small>蘑菇丘陵 / READY</small>
+        </button>
+        <button id="returnMenu" class="secondary">返回</button>
+      </section>
+
+      <section id="helpScreen" class="panel hidden">
+        <h2>操作方式</h2>
+        <p class="keys"><kbd>A</kbd><kbd>D</kbd> 或 <kbd>←</kbd><kbd>→</kbd> 移動</p>
+        <p class="keys"><kbd>W</kbd> / <kbd>↑</kbd> / <kbd>Space</kbd> 跳躍</p>
+        <p class="keys"><kbd>P</kbd> 暫停　<kbd>M</kbd> 音樂開關</p>
+        <p class="tip">由下方撞問號磚可取得成長蘑菇；只有踩頭才能擊敗敵人。</p>
+        <button id="closeHelp" class="primary">了解</button>
+      </section>
+
+      <section id="pauseScreen" class="panel compact hidden">
+        <h2>PAUSED</h2>
+        <button id="resumeButton" class="primary">繼續</button>
+        <button id="quitButton" class="secondary">回主選單</button>
+      </section>
+
+      <section id="resultScreen" class="panel hidden">
+        <p id="resultBadge" class="badge">COURSE CLEAR</p>
+        <h2 id="resultTitle">過關！</h2>
+        <p id="resultText" class="intro"></p>
+        <button id="retryButton" class="primary">再玩一次</button>
+        <button id="resultMenuButton" class="secondary">回主選單</button>
+      </section>
+
+      <button id="soundButton" class="sound" aria-label="切換音效">SOUND ON</button>
+    </section>
+    <p class="footer-help">Move: A/D or arrows &nbsp; Jump: W/Space &nbsp; Pause: P &nbsp; Mute: M</p>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
